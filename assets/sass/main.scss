@@ -1,0 +1,103 @@
+$primary-color : #d1d1d1;
+$secandary-color : #48ff00;
+
+body {
+    background-color: $primary-color;
+}
+
+p {
+    color:$secandary-color;
+    margin: 20px;
+    font-size: large;
+    border: 1px solid rgb(143, 143, 143);
+}
+
+
+.form-input {
+    @apply relative;
+    
+    input, select,textarea {
+      @apply w-full appearance-none outline-0 text-black transition-all duration-300 ease-in-out border-2 border-zinc-200/25 bg-zinc-50 focus:bg-transparent focus:border-zinc-300 px-4 py-2 text-lg rounded-lg hover:border-blue-500;
+      
+      &.is-invalid {
+        border-color: #d45867 !important;
+        &:hover {
+          border-color: #d45867 !important;
+        }
+        &:focus {
+          border-color: #d45867 !important;
+        }
+      }
+      &.is-valid {
+        border-color: #87ce98 !important;
+        &:hover {
+          border-color: #87ce98 !important;
+        }
+        &:focus {
+          border-color: #87ce98 !important;
+        }
+      }
+    }
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    
+  
+    input::placeholder {
+      opacity: 0.6;
+    }
+    input:focus::-webkit-input-placeholder {
+      opacity: 0;
+    }
+    input:focus::-moz-placeholder {
+      opacity: 0;
+    }
+    input:focus:-ms-input-placeholder {
+      opacity: 0;
+    }
+    input:focus:-moz-placeholder {
+      opacity: 0;
+    }
+  
+    // datepicker
+    .mx-datepicker {
+      width: 100%;
+      
+      .mx-input {
+        @apply w-full appearance-none outline-0 text-black transition-all duration-300 ease-in-out border-2 border-zinc-200/25 bg-zinc-50 focus:bg-transparent focus:border-zinc-300 px-4 py-2 text-lg rounded-lg hover:border-blue-500;
+        box-shadow: none !important;
+        height: auto;
+      }
+  
+      .mx-icon-calendar, .mx-icon-clear {
+        @apply text-gray-900 ;
+      }
+    }
+  }
+  
+  // multiselect
+  .multiselect{
+    // transition-duration: 0 !important;
+  
+    .multiselect__tags{
+      line-height: 0 !important;
+  
+      @apply border-2 border-zinc-200/25 bg-zinc-50 focus:bg-transparent focus:border-zinc-300 px-4 py-2 text-lg rounded-lg hover:border-blue-500;
+  
+      input {
+        @apply bg-zinc-50;
+        
+        transition-property: all !important;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition-duration: 0 !important; 
+        margin: 0 !important;
+      }
+      .multiselect__single{
+        background: transparent;
+        margin: 0 !important;
+      }
+    }
+  }

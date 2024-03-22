@@ -1,0 +1,10 @@
+body {
+    background-color: #ffc000;
+}
+
+p {
+    color: #48ff00;
+    margin: 20px;
+    font-size: large;
+    border: 1px solid #8f8f8f;
+}
